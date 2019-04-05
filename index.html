@@ -37,7 +37,6 @@
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments) };
         gtag('js', new Date());
-
         gtag('config', 'UA-107490980-1');
     </script>
 </head>
@@ -151,7 +150,7 @@
                                     <img class="img-responsive" src="assets/images/4r.png">
                                 </div>
                                 <div class="card-c-content">
-                                    <h3>Operating System Simulator</h3>
+                                    <h3>Operating System<br> Simulator</h3>
                                     <p>
                                         This simulator simulates operating system concepts using html, css and Javascript
                                     </p>
@@ -165,7 +164,8 @@
                                     <img class="img-responsive" src="assets/images/5r.jpg">
                                 </div>
                                 <div class="card-c-content">
-                                    <h3>Lonely Aged Parents</h3>
+                                    <h3>Lonely Aged Parents
+                                        <br>.</h3>
                                     <p>
                                         Providing basic needs of old aged parents through android app.
                                     </p>
@@ -179,7 +179,8 @@
                                     <img class="img-responsive" src="assets/images/6r.png">
                                 </div>
                                 <div class="card-c-content">
-                                    <h3>Traffic Light system</h3>
+                                    <h3>Traffic Light system
+                                        <br>.</h3>
                                     <p>
                                         Automation of traffic light system using arduino and degital design concepts
                                     </p>
@@ -193,7 +194,8 @@
                                     <img class="img-responsive" src="assets/images/12r.png">
                                 </div>
                                 <div class="card-c-content">
-                                    <h3>Files upload using php</h3>
+                                    <h3>Files upload using php
+                                        <br>.</h3>
                                     <p>
                                        Application to show demo of files are uploading in database using php in android app.
                                     </p>
@@ -207,7 +209,7 @@
                                     <img class="img-responsive" src="assets/images/13r.jpg">
                                 </div>
                                 <div class="card-c-content">
-                                    <h3>Software Effort estimation</h3>
+                                    <h3>Software Effort estimation<br>.</h3>
                                     <p>
                                       Software effort estimation using different machine learning algorithms.
 
@@ -222,7 +224,7 @@
                                     <img class="img-responsive" src="assets/images/14r.jpg">
                                 </div>
                                 <div class="card-c-content">
-                                    <h3>Chat Bot using Dialog flow</h3>
+                                    <h3>Chat Bot using Dialog flow<br>.</h3>
                                     <p>
                                        Chat Bot using dialog flow for real-time experinece during college tech-fest. 
                                     </p>
@@ -236,7 +238,7 @@
                                     <img class="img-responsive" src="assets/images/15r.jpg">
                                 </div>
                                 <div class="card-c-content">
-                                    <h3>U community</h3>
+                                    <h3>U community<br>.</h3>
                                     <p>
                                        making the community and competition environment among different competitors.
                                     </p>
@@ -318,7 +320,11 @@
                     </div>
                 </div>
             </section>
-            <footer class="footer">
+            
+    </div>
+
+    <div>
+        <footer class="footer">
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-12">
@@ -334,9 +340,6 @@
                     </div>
                 </div>
             </footer>
-    </div>
-    <div>
-        
     </div>
         <!-- <div class="parallax-window" data-parallax="scroll" data-image-src="img/Ottawa_1920x1080.jpg"></div>
         
@@ -371,9 +374,7 @@
 
         <script>
             $(document).ready(function () {
-
                 styleDefault();
-
                 $('#changestyle .dropdown-menu a').click(function () {
                     var style = $(this).data('val');
                     switch (style) {
@@ -391,17 +392,14 @@
                     }
                     $('#selstyle').text($(this).text());
                 });
-
                 /*-------------------------------
                     terminal linux style
                 -------------------------------*/
                 var about_me_content_displayed = false;
                 var $lines = $('.command p');
                 $lines.hide();
-
                 var lineContents = [];
                 var output = [];
-
                 var terminal = function () {
                     var skip = 0;
                     typeLine = function (idx) {
@@ -415,7 +413,6 @@
                         var charIdx = 0;
                         var typeChar = function () {
                             var rand = Math.round(Math.random() * 150) + 20;
-
                             setTimeout(function () {
                                 var char = content[charIdx++];
                                 element.append(char);
@@ -431,7 +428,6 @@
                         element.append('[ec2-user@ip-127-0-0-1 ~]$ ').addClass('active');
                         typeChar();
                     }
-
                     $lines.each(function (i) {
                         lineContents[i] = $(this).text();
                         output[i] = $(this).next('span').html();
@@ -439,7 +435,6 @@
                     });
                     typeLine();
                 }
-
                 $(window).scroll(function () {
                     var hT = $('#terminal-start').offset().top,
                         hH = $('#terminal-start').outerHeight(),
@@ -450,28 +445,22 @@
                         terminal();
                     }
                 });// end terminal style -------
-
                 $('section').each(function () {
                     $('.slider-navigation').prepend('<div class="tick"></div>');
                 });
-
                 $('.tick').on('click', function () {
                     var tickIndex = $(this).index();
                     $('body').scrollTop($(window).height() * tickIndex);
                 });
-
                 updatePos();
             }); // end document ready -------
-
             var isDragging = false;
             var sliderTop, pointerPos, currentSection;
-
             var bodyHeight = $('body').height();
             var sliderHeight = $('.slider-navigation').height();
             var elementHeight = $('section').height();
             var sectionAmount = $('section').length;
             var scale = (bodyHeight - (elementHeight)) / (sliderHeight - $('.nav-pointer').outerHeight());
-
             var waitForFinalEvent = (function () {
                 var timers = {};
                 return function (callback, ms, uniqueId) {
@@ -484,24 +473,20 @@
                     timers[uniqueId] = setTimeout(callback, ms);
                 };
             })();
-
             function updatePos() {
                 currentSection = $(window).scrollTop() / elementHeight;
                 currentSectionNum = Math.ceil(currentSection + 0.01);
                 sliderTop = $(window).scrollTop() / scale;
                 $('.nav-pointer').css('top', sliderTop).text(currentSectionNum + '/' + sectionAmount);
             }
-
             function sliderMove(e) {
                 $('body').scrollTop(parseInt(e) * scale);
             }
-
             $(window).scroll(function () {
                 if (!isDragging) {
                     updatePos();
                 }
             });
-
             $(window).resize(function () {
                 waitForFinalEvent(function () {
                     bodyHeight = $('body').height();
@@ -509,18 +494,15 @@
                     elementHeight = $('section').height();
                     sectionAmount = $('section').length;
                     scale = (bodyHeight - (elementHeight)) / (sliderHeight - $('.nav-pointer').outerHeight());
-
                     updatePos();
                 }, 500, "resizing");
             });
-
             
             console.log("\n \t Your work is going to fill a large part of your life,\n and the only way to be " +
                 "truly satisfied is to do what you \n believe is great work. And the only way to do great" +
                 " work \n is to love what you do. If you haven't found it yet, keep \n looking. Don't settle." +
                 " As with all matters of the heart, \n you'll know when you find it.\n\n\n \t\t\t\t\t\t\t\t\t\t\t " +
                 "Steve Jobs \n\n");
-
         </script>
 </body>
 
